@@ -1,18 +1,17 @@
 <script lang="ts">
+	import Button from '../components/Button.svelte';
 	import type { Game } from '../types/game';
 	export let game: Game;
 </script>
 
 <div
-	class="bg-gray-100 rounded-lg p-4 flex flex-row justify-between items-center hover:bg-gray-200 transition"
+	class="border border-gray-200 hover:border-transparent hover:text-white hover:shadow rounded-lg p-4 flex flex-row justify-between items-center hover:bg-gradient-to-r from-blue-500 to-green-400"
 >
 	<div class="mr-2">
 		<h1 class="text-2xl">{game.name}</h1>
 		<p>{game.description}</p>
 	</div>
-	<button
-		class="leading-6 bg-indigo-700 hover:bg-indigo-800 text-white p-3 rounded-lg focus:ring ring-indigo-700 ring-offset-2 transition flex flex-row"
-	>
+	<Button>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			class="h-6 w-6 mr-2"
@@ -28,5 +27,5 @@
 			/>
 		</svg>
 		Download
-	</button>
+	</Button>
 </div>
